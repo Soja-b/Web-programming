@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>
+  form validation
+ </title>
+ </head>
+ <style>
+ 	table{
+ 	background-color:#E9967A;
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	margin-top:1em;
+ 	}
+ 	tr,td,th{
+ 	padding:1em;
+ 	text-align:left;
+ 	}
+ 	.center th{
+ 	text-align:center;
+ 	}
+ 	h2{
+ 	text-align:center;
+ 	margin-top:2em;
+ 	background-color:black;
+ 	color:white;
+ 	}
+ 	</style>
+ 	<body>
+ 	<h2>
+ 	FORM VALIDATION</h2>
+ 	<form name="form"action=""method="POST"onsubmit="return validateForm()">
+ 	<table>
+ 	<tr>
+ 	<th>Name</th>
+ 	<td><input type="text" name="fname"></td>
+ 	</tr>
+ 	<tr>
+ 	<th>Age</th>
+ 	<td><input type="text" name="Age"></td>
+ 	</tr>
+ 	<tr><th>Email</th>
+ 	<td> <input type="email" name="email"></td>
+ 	</tr>
+ 	<tr>
+ 	<th>Mob No</th>
+ 	<td><input type="tel" name="mob"</td>
+ 	</tr>
+ 	<tr>
+ 	<th>User Name</th>
+ 	<td><input type="text" name="user"> </td>
+ 	</tr>
+ 	<tr>
+ 	<th>Gender</th>
+ 	<td><input type="radio"name="gender" value="Male">Male</td>
+   <td><input type="radio"name="gender" value="Female">Female</td>
+        <tr>
+ 	<th>Password</th>
+ 	<td><input type="password" name="passcode"></td>
+ 	</tr>
+ 	
+ 	<th>
+ 	language <br></th>
+		<td><input type="checkbox">Malayalam<br>
+          <input type="checkbox">english<br>
+          <input type="checkbox">hindi<br>
+        </td>
+        </tr>
+        <tr>
+ <th>Upload CV <input type="file">Choose file</th></tr>
+ <tr class="center">
+ 	<th colspan="2"><input type="submit" value="submit"></th>
+ 	</tr>
+ 	</table>
+ 	</form>
+ 	<script>
+ 	functon validateForm(){
+ 	var fname=document.form.fname.value;
+ 	var age=document.form.age.value;
+ 	var email=document.form.email.value;
+ 	var mob=document.form.mob.value;
+ 	var user=document.form.user.value;
+ 	var passcode=document.form.language.value;
+ 	var passcode=document.form.upload CV.value;
+ 	var passcode=document.form.passcode.value;
+ 	var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+var ren = /[0-9!@#$%^&*]/
+var qw = /^(?=.*\d)(?=.*[a-z])(?=.*[@])(?=.*[gmail])(?=.*[.])(?=.*[com])/
+if(fname==""){
+	alert("enter first name!!");
+	document.form.fname.focus();
+	return false;
+	}
+	else if(ren.test(fname)){
+	 alert("enter the valid name!!");
+	 document.form.fname.focus();
+	 return false;
+	 }
+	 if(Age==""){
+	alert("enter Age!!");
+	document.form.Age.focus();
+	return false;
+	}
+	else if(ren.test(Age)){
+	 alert("enter the Age!!");
+	 document.form.Age.focus();
+	 return false;
+	 }
+	 if(gender==""){
+	 alert("enter email!!");
+	 document.Form.gender.focus();
+	 return false;
+	 }
+	 else if(qw.test(email)){
+	lert("Enter Valid mail id !!");
+	document.form.email.focus();
+	return false;
+	}
+	 if(email==""){
+	 alert("enter email!!");
+	 document.Form.email.focus();
+	 return false;
+	 }
+	 else if(qw.test(email)){
+	lert("Enter Valid mail id !!");
+	document.form.email.focus();
+	return false;
+	}
+	if(mob==""){
+	alert("enter mobile number");
+	return false;
+	}
+	else if(isNaN(mob)){
+	alert("enter valid mobile number");
+	return  false;
+	}
+	else if(mob.length !=10){
+	alert("enter Mobile number with 10 digit");
+	return false;
+	}
+	if(user==""){
+	alert("enter user name!!"):
+	document.form.user.focus():
+	return false;
+}
+if(passcode==""||passcode.length<8||!re.test(passcode)){
+alert("enter minimum 8 digit Password!!"+'\n'+"atleast one Lowercase&uppercase&digit&special character must be includede");
+document.form.passcode.focus();
+return false;
+}
+if(language==""){
+	alert("enter language!!");
+	document.form.language.focus();
+	return false;
+	}
+	if(file==""){
+	alert("enter file name!!");
+	document.form.file.focus();
+	return false;
+	}
+	else if(ren.test(file)){
+	 alert("enter the valid file!!");
+	 document.form.file.focus();
+	 return false;
+	 }
+	 }
+</script>
+</body>
+</html>
+
+	
+
+
